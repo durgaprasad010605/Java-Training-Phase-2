@@ -4,7 +4,7 @@ class Addition{
     static int b=10;
     static void add(){
         Addition ob=new Addition();
-        System.out.println("Addition class "+(a+b+ob.c));
+        System.out.println("Addition class " + (a+b+ob.c));
     }
 
 }
