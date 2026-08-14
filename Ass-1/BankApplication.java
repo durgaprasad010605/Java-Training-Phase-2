@@ -91,12 +91,12 @@ class SavingsAccount extends BankAccount implements BankAccountOperations {
         }
     }
 
-    @Override
+
     public void checkBalance() {
         super.checkBalance();
     }
 
-    @Override
+
     public void displayAccountDetails() {
 
         super.displayAccountDetails();
@@ -179,30 +179,17 @@ public class BankApplication {
 
 
         CurrentAccount c1 =new CurrentAccount(201, "abc1",25000, 9876543213L, 5000, 2000);
-
         CurrentAccount c2 =new CurrentAccount(202, "abc2",30000, 9876543214L, 5000, 2000);
-
         CurrentAccount c3 =new CurrentAccount(203, "abc3",35000, 9876543215L, 5000, 2000);
-
         CurrentAccount c4 =new CurrentAccount(204, "abc4",40000, 9876543216L, 5000, 2000);
-
         CurrentAccount c5 =new CurrentAccount(205, "abc5", 45000, 9876543217L, 5000, 2000);
-
-
         s1.depositAmount(5000);
-
         s2.withdrawAmount(2000);
-
         s3.checkBalance();
-
         s4.displayAccountDetails();
-
         c1.depositAmount(10000);
-
         c2.withdrawAmount(15000);
-
         c3.checkBalance();
-
         c1.displayAccountDetails();
 
 
