@@ -4,7 +4,6 @@ interface BankAccountOperations {
     void checkBalance();
     void displayAccountDetails();
 }
-
 abstract class BankAccount {
 
     int accountNumber;
@@ -168,21 +167,16 @@ public class BankApplication {
     public static void main(String[] args) {
 
         SavingsAccount s1 =new SavingsAccount(101, "rdp1",10000, 9876543210L, 5, 1000);
-
         SavingsAccount s2 =new SavingsAccount(102, "rdp2",15000, 9876543211L, 5, 1000);
-
-        SavingsAccount s3 =new SavingsAccount(103    , "rdp3",20000, 9876543212L, 5, 1000);
-
-        SavingsAccount s4 =new SavingsAccount(104       , "rdp4",80000, 9876887489L, 5, 1000);
-
+        SavingsAccount s3 =new SavingsAccount(103, "rdp3",20000, 9876543212L, 5, 1000);
+        SavingsAccount s4 =new SavingsAccount(104, "rdp4",80000, 9876887489L, 5, 1000);
         SavingsAccount s5 =new SavingsAccount(105, "rdp5",40000, 9876947394L, 5, 1000);
-
 
         CurrentAccount c1 =new CurrentAccount(201, "abc1",25000, 9876543213L, 5000, 2000);
         CurrentAccount c2 =new CurrentAccount(202, "abc2",30000, 9876543214L, 5000, 2000);
         CurrentAccount c3 =new CurrentAccount(203, "abc3",35000, 9876543215L, 5000, 2000);
         CurrentAccount c4 =new CurrentAccount(204, "abc4",40000, 9876543216L, 5000, 2000);
-        CurrentAccount c5 =new CurrentAccount(205, "abc5", 45000, 9876543217L, 5000, 2000);
+        CurrentAccount c5 =new CurrentAccount(205, "abc5",45000, 9876543217L, 5000, 2000);
         s1.depositAmount(5000);
         s2.withdrawAmount(2000);
         s3.checkBalance();
@@ -191,6 +185,7 @@ public class BankApplication {
         c2.withdrawAmount(15000);
         c3.checkBalance();
         c1.displayAccountDetails();
+
 
 
         BankAccount.totalAccounts =SavingsAccount.savingsAccountcount + CurrentAccount.currentAccountcount;
