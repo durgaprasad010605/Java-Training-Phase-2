@@ -24,5 +24,26 @@ public class EmpService {
 		return null;
 	}
 
+	public Emp getById(Long id) {
+		return repo.findById(id).orElseThrow(()-> new RuntimeException("Emp not found"));
+	}
 
+	public Emp updateEmp(Long id, Emp e) {
+		Emp ee=getById(id);
+		ee.setName(e.getName());
+		ee.setDesg(e.getDesg());
+		ee.setSalary(e.getSalary());
+		return repo.save(ee);
+	}
+
+	public String deleteEmp(Long id) {
+		Emp e=getById(id);
+		repo.delete(e);
+		return "Emp id deleted succesfully";
+	}
+
+	public List<Emp> getByName(String name) {
+		return repo.findByName(name);
+		
+	}
 }

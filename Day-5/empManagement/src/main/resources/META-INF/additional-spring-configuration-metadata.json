@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "sprig.database.username",
+  "type": "java.lang.String",
+  "description": "A description for 'sprig.database.username'"
+}]}
